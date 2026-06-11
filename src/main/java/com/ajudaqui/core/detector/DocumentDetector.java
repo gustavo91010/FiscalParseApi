@@ -13,6 +13,12 @@ public class DocumentDetector {
     public DetectionResult detect(Input input) {
         if (input instanceof UrlInput urlInput) {
             String url = urlInput.url();
+
+            if (url.contains("sefaz.pb.gov.br")) {
+                if (url.contains("nfce")) {
+                    return new DetectionResult(DocumentType.NFCE, State.PB);
+                }
+            }
             if (url.contains("sefaz.pe.gov.br")) {
                 if (url.contains("nfce")) {
                     return new DetectionResult(DocumentType.NFCE, State.PE);

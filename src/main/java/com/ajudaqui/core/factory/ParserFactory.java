@@ -12,6 +12,9 @@ public class ParserFactory {
         if (type == DocumentType.NFCE && state == State.PE) {
             return new NFCePEParser();
         }
+        if (type == DocumentType.NFCE && state == State.PB) {
+            return new NFCePEParser();
+        }
         throw new UnsupportedOperationException("Parser não suportado para " + type + " em " + state);
     }
 }

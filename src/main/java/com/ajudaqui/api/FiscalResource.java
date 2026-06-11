@@ -17,7 +17,7 @@ public class FiscalResource {
     FiscalParseService service;
 
     @POST
-    @Path("/parse-url")
+    @Path("/fiscal/parse-url")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public FiscalDocument parseUrl(ParseRequest request) {
